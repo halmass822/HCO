@@ -1,0 +1,38 @@
+.MainPage {
+    background-color: #C0C0C0;
+    margin: 2rem;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.MainPage_header {
+    background-color: #DCDCDC;
+    display: inline;
+    padding: 0.25rem 2rem;
+}
+
+.MainPage_actionSelector {
+    display: flex;
+}
+
+.MainPage_updateSelector, .MainPage_pageOutSelector {
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.MainPage_actionSelector h2 {
+    font-size: 2rem;
+}
+
+.MainPage_actionSelector img {
+    width: 5rem;
+}
+
+.MainPage_pageOutSelector {
+    background-color: #8FAFFF;
+}
+
+.MainPage_updateSelector {
+    background-color: #8FFF94;
+}

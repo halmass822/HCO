@@ -1,0 +1,39 @@
+.PageOutPage {
+    background-color: #C0C0C0;
+    margin: 2rem;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.PageOutPage_header {
+    background-color: #DCDCDC;
+    display: inline;
+    padding: 0.25rem 2rem;
+}
+
+.PageOutPage_unitSelector {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;    
+}
+
+.PageOutPage_UnitSelectionButton {
+    margin: 1rem;
+    padding: 1rem;
+    background-color: rgb(59, 170, 59);
+}
+
+.PageOutPage_UnitSelectionButton:hover {
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    transition: 0.07s;
+}
+
+.PageOutPage_UnitSelectionButton h2 {
+    font-size: 2rem;
+}
+
+.PageOutPage_UnitSelectionButton img {
+    width: 8rem;
+}
