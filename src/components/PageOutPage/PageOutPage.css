@@ -1,6 +1,6 @@
 .PageOutPage {
     background-color: #C0C0C0;
-    margin: 2rem;
+    margin: 0 2rem;
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -26,8 +26,8 @@
 
 .PageOutPage_UnitSelectionButton:hover {
     cursor: pointer;
-    background-color: rgb(255, 255, 255);
-    transition: 0.07s;
+    background-color: rgb(255, 255, 99);
+    transition: 0.2s;
 }
 
 .PageOutPage_UnitSelectionButton h2 {

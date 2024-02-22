@@ -1,13 +1,31 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import PageOutPage from './components/PageOutPage/PageOutPage';
+import MainPage from './components/MainPage/MainPage';
+import TopBar from './components/TopBar/TopBar';
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <MainPage />
+  },
+  {
+    path: "pageout",
+    element: <PageOutPage />
+  },
+  {
+    path: "debug",
+    element: <TopBar />
+  }
+])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 
