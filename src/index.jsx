@@ -3,44 +3,25 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
-import PageOutPage from './components/PageOutPage/PageOutPage';
+import UnitsList from './components/UnitsList/UnitsList';
 import MainPage from './components/MainPage/MainPage';
-import TopBar from './components/TopBar/TopBar';
 import App from './App';
+import RouterChild from './components/RouterChild/RouterChild';
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-  },
-  {
-    path: "home",
-    element: <MainPage />
-  },
-  {
-    path: "pageout",
-    element: <PageOutPage />
-  },
-])
-
-const router2 = createBrowserRouter(
+const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
       <Route index element={<MainPage />} />
-      <Route path="pageout" element={<PageOutPage />} />
+      <Route path="unitslist" element={<UnitsList />} />
+      <Route path="unitslist/:unit" element={<RouterChild />} />
     </Route>
-    
-    // <Route path="/" element={<App />}>
-    //   <Route path="home" element={<MainPage />}></Route>
-    //   <Route path="pageout" element={<PageOutPage />}></Route>
-    // </Route>
   )
 )
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <RouterProvider router={router2} />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );
 

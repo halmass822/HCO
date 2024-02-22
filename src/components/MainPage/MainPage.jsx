@@ -7,7 +7,7 @@ export default function MainPage() {
     return <div className="MainPage">
         <h2 className="MainPage_header">OPP CALLOUT LIST</h2>
         <div className="MainPage_actionSelector">
-            <Link to="pageout" className="MainPage_pageOutSelector">
+            <Link to="unitslist" className="MainPage_pageOutSelector">
                     <h2>PAGE OUT</h2>
                     <img src={handsetLogo} alt="handset logo"></img>
             </Link>

@@ -7,16 +7,19 @@ export default function TopBar() {
         <Link to="/">
             <h2>HOME</h2>
         </Link>
-        <Link to="K9">
+        <Link to="unitslist">
+            <h2>UNITS</h2>
+        </Link>
+        <Link to="unitslist/K9">
             <h2>K9</h2>
         </Link>
-        <Link to="ERT">
+        <Link to="unitslist/ERT">
             <h2>ERT</h2>
         </Link>
-        <Link to="CIB">
+        <Link to="unitslist/CIB">
             <h2>CIB</h2>
         </Link>
-        <Link to="CIC">
+        <Link to="unitslist/CIC">
             <h2>CIC</h2>
         </Link>
     </header>
