@@ -3,9 +3,7 @@ import MainPage from "../MainPage/MainPage";
 import "./TopBar.css";
 
 export default function TopBar() {
-    return <div>
-
-    <header className="TopBarHeader">
+    return <header className="TopBarHeader">
         <Link to="/">
             <h2>HOME</h2>
         </Link>
@@ -22,6 +20,4 @@ export default function TopBar() {
             <h2>CIC</h2>
         </Link>
     </header>
-    <MainPage />
-    </div>
 }
