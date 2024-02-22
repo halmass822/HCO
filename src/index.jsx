@@ -4,16 +4,14 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
 import UnitsList from './components/UnitsList/UnitsList';
-import MainPage from './components/MainPage/MainPage';
 import App from './App';
 import RouterChild from './components/RouterChild/RouterChild';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
-      <Route index element={<MainPage />} />
-      <Route path="unitslist" element={<UnitsList />} />
-      <Route path="unitslist/:unit" element={<RouterChild />} />
+      <Route index element={<UnitsList />} />
+      <Route path=":unit" element={<RouterChild />} />
     </Route>
   )
 )

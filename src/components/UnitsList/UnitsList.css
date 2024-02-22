@@ -1,4 +1,4 @@
-.PageOutPage {
+.UnitsList {
     background-color: #C0C0C0;
     margin: 0 2rem;
     display: flex;
@@ -6,35 +6,35 @@
     align-items: center;
 }
 
-.PageOutPage_header {
+.UnitsList_header {
     background-color: #DCDCDC;
     display: inline;
     padding: 0.25rem 2rem;
 }
 
-.PageOutPage_unitSelector {
+.UnitsList_unitSelector {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;    
 }
 
-.PageOutPage_UnitSelectionButton {
+.UnitsList_UnitSelectionButton {
     margin: 1rem;
     padding: 1rem;
     background-color: rgb(59, 170, 59);
 }
 
-.PageOutPage_UnitSelectionButton:hover {
+.UnitsList_UnitSelectionButton:hover {
     cursor: pointer;
     background-color: rgb(255, 255, 99);
     transition: 0.2s;
 }
 
-.PageOutPage_UnitSelectionButton h2 {
+.UnitsList_UnitSelectionButton h2 {
     font-size: 2rem;
     text-align: center;
 }
 
-.PageOutPage_UnitSelectionButton img {
+.UnitsList_UnitSelectionButton img {
     width: 8rem;
 }
