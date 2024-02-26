@@ -9,6 +9,7 @@ export default function UnitMembersRegional() {
     const [regionMembers, setRegionMembers] = useState([]);
     const [nearbyMembers, setNearbyMembers] = useState([]);
     const [otherMembers, setOtherMembers] = useState([]);
+    const [unitsSelectedForPageout, setUnitsSelectedForPageout] = useState([]);
 
     useState(() => {
         setRegionMembers(unitMembers.filter((member) => member.region === selectedRegion));
@@ -25,11 +26,14 @@ export default function UnitMembersRegional() {
     }, [selectedRegion])
 
 
+
     return <div className="UnitMembers">
         <UnitMembersRegionalTable 
             regionMembers={regionMembers} 
             nearbyMembers={nearbyMembers}
             otherMembers={otherMembers}
+            pageoutSelectionMethod={setUnitsSelectedForPageout}
+            unitsSelectedForPageout={unitsSelectedForPageout}
             />
     </div>
 }

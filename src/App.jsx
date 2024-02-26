@@ -1,10 +1,11 @@
 import { Outlet } from "react-router-dom";
 import TopBar from "./components/TopBar/TopBar";
+import "./App.css"
 
 export default function App() {
     return <div className="HCOAppMain">
         <TopBar />
-        <main>
+        <main className="HCOAppContainer">
             <Outlet />
         </main>
     </div>
