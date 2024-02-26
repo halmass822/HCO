@@ -8,7 +8,7 @@ export default function UnitsList() {
             PAGE OUT RESOURCES
         </h2>
         <div className="UnitsList_unitSelector">
-            <Link to="K9/6j_middlesex" className="UnitsList_UnitSelectionButton">
+            <Link to="K9" className="UnitsList_UnitSelectionButton">
                 <img alt="K9 logo" src={placeholderImg}></img>
                 <h2>K9</h2>
             </Link>
