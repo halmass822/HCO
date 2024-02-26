@@ -2,8 +2,7 @@ import { WRCounties } from "../../utils";
 
 export default function UnitMembersRegionalPanel(props) {
     function handleChange(e) {
-        e.preventDefault();
-        props.setSelectedRegionProp(e.target.value)
+        props.setSelectedRegionProp(e.target.value);
     };
 
     return <div className="UnitMembersRegionalPanel">
