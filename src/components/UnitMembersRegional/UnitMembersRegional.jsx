@@ -2,9 +2,10 @@ import { useParams } from "react-router-dom";
 import { useState } from "react";
 import UnitMembersRegionalTable from "./UnitMembersRegionalTable";
 import { initialK9Data, neighbouringCounties } from "../../utils";
+import UnitMembersRegionalPanel from "./UnitMembersRegionalPanel";
 
 export default function UnitMembersRegional() {
-    const [selectedRegion, setSelectedRegion] = useState("6j");
+    const [selectedRegion, setSelectedRegion] = useState("6J");
     const [unitMembers, setUnitMembers] = useState(initialK9Data);
     const [regionMembers, setRegionMembers] = useState([]);
     const [nearbyMembers, setNearbyMembers] = useState([]);
@@ -13,7 +14,7 @@ export default function UnitMembersRegional() {
 
     useState(() => {
         setRegionMembers(unitMembers.filter((member) => member.region === selectedRegion));
-        const nearbyRegions = neighbouringCounties[selectedRegion];
+        const nearbyRegions = neighbouringCounties.hasOwnProperty(selectedRegion) ? neighbouringCounties[selectedRegion] : "";
         setNearbyMembers(
             unitMembers.filter((member) => {
                 return nearbyRegions.includes(member.region);
@@ -23,11 +24,12 @@ export default function UnitMembersRegional() {
                 return !nearbyRegions.includes(member.region) && !(selectedRegion === member.region)
             })
         )
-    }, [selectedRegion])
+    }, [selectedRegion, neighbouringCounties])
 
 
 
     return <div className="UnitMembers">
+        <UnitMembersRegionalPanel selectedRegionProp={selectedRegion} setSelectedRegionProp={setSelectedRegion} />
         <UnitMembersRegionalTable 
             regionMembers={regionMembers} 
             nearbyMembers={nearbyMembers}

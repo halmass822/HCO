@@ -1,9 +1,6 @@
 import UnitMemberRegionalRow from "./UnitMemberRegionalRow";
 
 export default function UnitMembersRegionalTable(props) {
-    
-    
-
     return <table className="UnitMembers_table">
         <thead>
             <tr>
