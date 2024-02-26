@@ -5,13 +5,13 @@ import reportWebVitals from './reportWebVitals';
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
 import UnitsList from './components/UnitsList/UnitsList';
 import App from './App';
-import RouterChild from './components/RouterChild/RouterChild';
+import UnitMembers from './components/UnitMembersRegional/UnitMembersRegional';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
       <Route index element={<UnitsList />} />
-      <Route path=":unit" element={<RouterChild />} />
+      <Route path="K9/:unit" element={<UnitMembers />} />
     </Route>
   )
 )

@@ -141,7 +141,7 @@ const initialK9Data = [
     },
 ];
 
-const neighbouringCountiesData = {
+const neighbouringCountiesData = { //change these to the full name like in the objects above
     "6e": ["USA_Michigan", "6d", "6p"],
     "6d": ["6e", "6m", "6p", "6j"],
     "6p": ["6d", "6j", "6s", "6o"],
@@ -150,10 +150,11 @@ const neighbouringCountiesData = {
     "6b": ["5i", "5c", "6c", "6o", "6s"],
     "6s": ["6n", "5i", "6b", "6o", "6p", "6j"],
     "6j": ["6g", "6n", "6s", "6p", "6d", "6m"],
-    "6m": ["6g", "6j", "6p", "6d"],
+    "6m": ["USA_Michigan", "6g", "6j", "6p", "6d"],
     "6g": ["6i", "6l", "6t", "6n", "6j", "6m"],
     "6n": ["6g", "6t", "5i", "6s", "6j"],
     "5i": ["6t", "5c", "5b", "5f", "1s"],
+    "5c": ["USA_Newyork", "6c", "6b", "5i"], //ADD 5B 5F
     "6t": ["6l", "5c", "5i", "6n", "6g"], //GET CENTRAL MAP
     "6l": ["6t", "6g", "6i"],
     "6i": ["6l", "6t", "6g"]
