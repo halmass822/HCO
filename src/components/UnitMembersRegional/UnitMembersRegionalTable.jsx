@@ -13,9 +13,9 @@ export default function UnitMembersRegionalTable(props) {
             </tr>
         </thead>
         <tbody>
-            {props.regionMembers.map((member, index) => <UnitMemberRegionalRow details={member} key= {index} selectionRef="region" selectedMembers={props.unitsSelectedForPageout} setSelectedMembers={props.pageoutSelectionMethod}/>)}
-            {props.nearbyMembers.map((member, index) => <UnitMemberRegionalRow details={member} key= {index} selectionRef="nearby" selectedMembers={props.unitsSelectedForPageout} setSelectedMembers={props.pageoutSelectionMethod}/>)}
-            {props.otherMembers.map((member, index) => <UnitMemberRegionalRow details={member} key= {index} selectionRef="" selectedMembers={props.unitsSelectedForPageout} setSelectedMembers={props.pageoutSelectionMethod}/>)}
+            {props.regionMembers.map((member, index) => <UnitMemberRegionalRow details={member} key= {index} selectionRef="region" selectedMembers={props.unitsSelectedForPageout} setSelectedMembers={props.pageoutSelectionMethod} selectedRegionProp2={props.selectedRegionProp}/>)}
+            {props.nearbyMembers.map((member, index) => <UnitMemberRegionalRow details={member} key= {index} selectionRef="nearby" selectedMembers={props.unitsSelectedForPageout} setSelectedMembers={props.pageoutSelectionMethod} selectedRegionProp2={props.selectedRegionProp}/>)}
+            {props.otherMembers.map((member, index) => <UnitMemberRegionalRow details={member} key= {index} selectionRef="" selectedMembers={props.unitsSelectedForPageout} setSelectedMembers={props.pageoutSelectionMethod} selectedRegionProp2={props.selectedRegionProp}/>)}
         </tbody>
     </table>
 }

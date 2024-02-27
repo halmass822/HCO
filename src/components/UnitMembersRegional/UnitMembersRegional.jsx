@@ -36,6 +36,7 @@ export default function UnitMembersRegional() {
             otherMembers={otherMembers}
             pageoutSelectionMethod={setUnitsSelectedForPageout}
             unitsSelectedForPageout={unitsSelectedForPageout}
+            selectedRegionProp={selectedRegion}
             />
     </div>
 }

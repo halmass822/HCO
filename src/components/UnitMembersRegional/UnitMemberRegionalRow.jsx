@@ -4,23 +4,21 @@ export default function UnitMemberRegionalRow(props) {
     const [isChecked, setIsChecked] = useState(false);
 
     useEffect(() => {
-        if(props.selectedMembers.find((x) => x === props.details.page_at)) {
-            setIsChecked(true);
-        } else {
-            setIsChecked(false);
-        }
-    }, [props.selectedMembers, isChecked])
+        setIsChecked(props.selectedMembers.includes(props.details.page_at))
+    }, [props.selectedMembers, props.details.page_at, props.selectedRegionProp2])
 
     function handleCheck(e) {
         e.preventDefault();
-        if(!isChecked) {
+        const newChecked = !isChecked;
+        setIsChecked(newChecked);
+        if(newChecked) {
             props.setSelectedMembers((prev) => [...prev, props.details.page_at]);
         } else {
             props.setSelectedMembers((prev) => prev.filter((x) => x !== props.details.page_at));
         }
     }
 
-    return <tr className={`UnitMemberRegionalRow ${props.selectionRef}`} onClick={handleCheck}>
+    return <tr className={`UnitMemberRegionalRow ${props.selectionRef} ${isChecked}_state`} onClick={handleCheck}>
         <td>{props.details.region}</td>
         <td>{props.details.officer_name}</td>
         <td>{props.details.badge}</td>
@@ -28,7 +26,7 @@ export default function UnitMemberRegionalRow(props) {
         <td>{props.details.phone_number}</td>
         <td>{props.details.notes}</td>
         <td>
-            <input type="checkbox" checked={isChecked} onChange={handleCheck} />
+            <button onChange={handleCheck}>SELECT</button>
         </td>
     </tr>
 }
