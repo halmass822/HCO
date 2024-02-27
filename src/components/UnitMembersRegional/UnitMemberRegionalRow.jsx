@@ -20,7 +20,7 @@ export default function UnitMemberRegionalRow(props) {
         }
     }
 
-    return <tr className={`UnitMemberRegionalRow ${props.selectionRef}`}>
+    return <tr className={`UnitMemberRegionalRow ${props.selectionRef}`} onClick={handleCheck}>
         <td>{props.details.region}</td>
         <td>{props.details.officer_name}</td>
         <td>{props.details.badge}</td>
