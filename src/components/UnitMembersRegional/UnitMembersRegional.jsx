@@ -1,8 +1,8 @@
-import { useParams } from "react-router-dom";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import UnitMembersRegionalTable from "./UnitMembersRegionalTable";
 import { initialK9Data, neighbouringCounties } from "../../utils";
 import UnitMembersRegionalPanel from "./UnitMembersRegionalPanel";
+import "./UnitMembersRegional.css"
 
 export default function UnitMembersRegional() {
     const [selectedRegion, setSelectedRegion] = useState("6J");
