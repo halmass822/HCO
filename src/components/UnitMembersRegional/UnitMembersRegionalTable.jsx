@@ -7,7 +7,7 @@ export default function UnitMembersRegionalTable(props) {
                 <th>Region</th>
                 <th>Name</th>
                 <th>Badge</th>
-                <th>Quals</th>
+                <th>Skills</th>
                 <th>Contact</th>
                 <th>Notes</th>
             </tr>

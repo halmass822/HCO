@@ -32,6 +32,8 @@
 
 .UnitMembers_table tr {
     border-bottom: 1px solid black;
+    height: 2rem;
+    font-size: 1.25rem;
 }
 
 .UnitMembers_table td {
