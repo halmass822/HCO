@@ -5,7 +5,7 @@ import UnitMembersRegionalPanel from "./UnitMembersRegionalPanel";
 import "./UnitMembersRegional.css"
 
 export default function UnitMembersRegional(props) {
-    const [selectedRegion, setSelectedRegion] = useState("6J");
+    const [selectedRegion, setSelectedRegion] = useState("6J Middlesex");
     const [unitMembers, setUnitMembers] = useState(initialK9Data);
     const [regionMembers, setRegionMembers] = useState([]);
     const [nearbyMembers, setNearbyMembers] = useState([]);
@@ -13,15 +13,15 @@ export default function UnitMembersRegional(props) {
     const [unitsSelectedForPageout, setUnitsSelectedForPageout] = useState([]);
 
     useEffect(() => {
-        setRegionMembers(unitMembers.filter((member) => member.region === selectedRegion));
+        setRegionMembers(unitMembers.filter((member) => member.regionLong === selectedRegion));
         let nearbyRegions = neighbouringCounties.hasOwnProperty(selectedRegion) ? neighbouringCounties[selectedRegion] : "";
         setNearbyMembers(
             unitMembers.filter((member) => {
-                return nearbyRegions.includes(member.region);
+                return nearbyRegions.includes(member.regionLong);
             }))
         setOtherMembers(
             unitMembers.filter((member) => {
-                return !nearbyRegions.includes(member.region) && !(selectedRegion === member.region)
+                return !nearbyRegions.includes(member.regionLong) && !(selectedRegion === member.regionLong)
             })
         )
     }, [selectedRegion])

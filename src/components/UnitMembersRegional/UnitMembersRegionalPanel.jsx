@@ -14,7 +14,7 @@ export default function UnitMembersRegionalPanel(props) {
         <h2 className="UnitMembersRegionalPanel_header">{props.teamProps} PAGE OUT</h2>
         <select className="UnitMembersRegionalPanel_select" onChange={handleChange} value={props.selectedRegionProp} title="region_select">
             {WRCounties.map((county, index) => {
-                return <option key={index} value={county.slice(0,2)} id={county} >{county}</option>
+                return <option key={index} value={county} id={county} >{county}</option>
             })}
         </select>
         <button className="UnitMembersRegionalPanel_button" type="submit" onClick={handleSendPageout}>Page Selected Units</button>
