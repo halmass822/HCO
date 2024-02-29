@@ -4,12 +4,12 @@ export default function UnitMembersRegionalTable(props) {
     return <table className="UnitMembers_table">
         <thead>
             <tr className="UnitMembersRegionalTable_tr">
-                <th className="UnitMembersRegionalTable_header_Region">Region</th>
+                <th className="UnitMembersRegionalTable_header_County">County</th>
                 <th className="UnitMembersRegionalTable_header_Name">Name</th>
                 <th className="UnitMembersRegionalTable_header_Badge">Badge</th>
                 <th className="UnitMembersRegionalTable_header_Skills">Skills</th>
                 <th className="UnitMembersRegionalTable_header_Contact">Contact</th>
-                <th className="UnitMembersRegionalTable_header_Notes" colspan="2">Notes</th>
+                <th className="UnitMembersRegionalTable_header_Notes" colSpan="2">Notes</th>
             </tr>
         </thead>
         <tbody>

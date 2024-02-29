@@ -193,3 +193,12 @@ export const WRCounties = [
     "5F Toronto",
     "5B Aurora",
 ];
+
+export function parseCounty(inputRegionCode) {
+        const countyFull = WRCounties.find((x) => x.slice(0,2) === inputRegionCode)
+        if(countyFull) {
+            return countyFull.slice(3);
+        } else {
+            return "[COUNTY]";
+        }
+}

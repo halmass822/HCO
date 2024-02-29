@@ -63,7 +63,15 @@
 }
 
 .UnitMemberRegionalRow_true_state {
-    background-color: greenyellow;
+    background-color: greenyellow !important;
+}
+
+.UnitMemberRegionalRow_region {
+    background-color: rgb(219, 255, 165)
+}
+
+.UnitMemberRegionalRow_nearby {
+    background-color: rgb(251, 253, 160)
 }
 
 .UnitMemberRegionalRow_td_notes {
