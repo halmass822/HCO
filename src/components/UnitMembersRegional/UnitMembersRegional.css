@@ -28,16 +28,39 @@
 .UnitMembers_table {
     margin-top: 1rem;
     border-collapse: collapse;
+    background-color: white;
 }
 
-.UnitMembers_table tr {
+.UnitMembersRegionalTable_tr {
     border-bottom: 1px solid black;
     height: 2rem;
     font-size: 1.25rem;
 }
 
-.UnitMembers_table td {
-    padding: 0 0.5px;
+.UnitMemberRegionalRow {
+    border-bottom: 1px solid black;
+    height: 2rem;
+    font-size: 1.25rem;
+}
+
+.UnitMembersRegionalTable_header_Name {
+    width: 13rem;
+}
+
+.UnitMembersRegionalTable_header_Badge {
+    width: 5rem;
+}
+
+.UnitMembersRegionalTable_header_Skills {
+    width: 10rem;
+}
+
+.UnitMembersRegionalTable_header_Contact {
+    width: 9rem;
+}
+
+.UnitMembers_table td, .UnitMembers_table th {
+    padding: 0 0.5rem;
 }
 
 .UnitMemberRegionalRow_true_state {
