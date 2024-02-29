@@ -1,5 +1,6 @@
-import { Link, Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
 import placeholderImg from "../../assets/img_placeholder.png";
+import ERTLogo from "../../assets/ERTLogo.png"
 import "./UnitsList.css"
 
 export default function UnitsList() {
@@ -13,15 +14,15 @@ export default function UnitsList() {
                 <h2>K9</h2>
             </Link>
             <Link to="ERT" className="UnitsList_UnitSelectionButton">
-                <img alt="K9 logo" src={placeholderImg}></img>
+                <img alt="ERT logo" src={ERTLogo}></img>
                 <h2>ERT</h2>
             </Link>
             <Link to="CIB" className="UnitsList_UnitSelectionButton">
-                <img alt="K9 logo" src={placeholderImg}></img>
+                <img alt="CIB logo" src={placeholderImg}></img>
                 <h2>CIB</h2>
             </Link>
             <Link to="CIC" className="UnitsList_UnitSelectionButton">
-                <img alt="K9 logo" src={placeholderImg}></img>
+                <img alt="CIC logo" src={placeholderImg}></img>
                 <h2>CIC</h2>
             </Link>
         </div>
