@@ -39,7 +39,6 @@
 
 .UnitMemberRegionalRow {
     border-bottom: 1px solid black;
-    height: 2rem;
     font-size: 1.25rem;
 }
 
@@ -60,13 +59,26 @@
 }
 
 .UnitMembers_table td, .UnitMembers_table th {
-    padding: 0 0.5rem;
+    padding: 0.5rem;
 }
 
 .UnitMemberRegionalRow_true_state {
     background-color: greenyellow;
 }
 
+.UnitMemberRegionalRow_td_notes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 20rem;
+}
+
+.UnitMemberRegionalRow_td_notes p {
+    flex-grow: 1;
+    margin: 0 0.5rem;
+}
+
 .UnitMemberRegionalRow_button {
     cursor: pointer;
+    height: 1.66rem;
 }

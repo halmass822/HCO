@@ -24,9 +24,9 @@ export default function UnitMemberRegionalRow(props) {
         <td>{props.details.badge}</td>
         <td>{props.details.skillset.map((x) => `${x} `)}</td>
         <td>{props.details.phone_number}</td>
-        <td className={"UnitMemberRegionalRow_td_notes"}>{props.details.notes}</td>
-        <td>
-            <button onClick={handleCheck} className="UnitMemberRegionalRow_button">SELECT</button>
-        </td>
+        <td className={"UnitMemberRegionalRow_td_notes"}>
+            <p>{props.details.notes}</p>
+            <button onClick={handleCheck} type="submit" className="UnitMemberRegionalRow_button">SELECT</button>
+            </td>
     </tr>
 }
