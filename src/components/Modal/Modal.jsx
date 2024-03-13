@@ -1,10 +1,15 @@
 import React from 'react'
-import { Outlet } from 'react-router-dom'
+import ReactDOM from 'react-dom';
+import "./Modal.css"
 
-export default function Modal() {
+export default function Modal(props) {
+  if(!props.isOpen) return null;
   return ReactDOM.createPortal(
+    <>
+    <div className="modal_overlay"></div>
     <div className="modal_div">
-        <Outlet />
+      {props.children}
     </div>
+    </>
   , document.getElementById("portal"));
 }
