@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import placeholderImg from "../../assets/img_placeholder.png";
 import ERTLogo from "../../assets/ERTLogo.png"
-import K9Logo from "../../assets/K9logo.jpg"
+import K9Logo from "../../assets/K9logo.png"
 import "./UnitsList.css"
 
 export default function UnitsList() {
@@ -18,11 +18,11 @@ export default function UnitsList() {
                 <img alt="ERT logo" src={ERTLogo}></img>
                 <h2>ERT</h2>
             </Link>
-            <Link to="CIB" className="UnitsList_UnitSelectionButton">
+            <Link to="/" className="UnitsList_UnitSelectionButton disabledLink">
                 <img alt="CIB logo" src={placeholderImg}></img>
                 <h2>CIB</h2>
             </Link>
-            <Link to="CIC" className="UnitsList_UnitSelectionButton">
+            <Link to="/" className="UnitsList_UnitSelectionButton disabledLink">
                 <img alt="CIC logo" src={placeholderImg}></img>
                 <h2>CIC</h2>
             </Link>
