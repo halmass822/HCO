@@ -17,7 +17,7 @@ export default function App() {
     }
 
     function changeUnitInfo(targetUnit, details) {
-
+        
     }
 
     return <div className="HCOAppMain">
