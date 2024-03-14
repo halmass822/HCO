@@ -3,10 +3,12 @@ import UnitMembersRegionalTable from "./UnitMembersRegionalTable";
 import { initialK9Data, neighbouringCounties, parseCounty } from "../../utils";
 import UnitMembersRegionalPanel from "./UnitMembersRegionalPanel";
 import "./UnitMembersRegional.css"
+import { unitSelector } from "../../store";
+import { useSelector } from "react-redux";
 
 export default function UnitMembersRegional(props) {
     const [selectedRegion, setSelectedRegion] = useState("6J Middlesex");
-    const [unitMembers, setUnitMembers] = useState(initialK9Data);
+    const unitMembers = useSelector(unitSelector)[props.team]
     const [regionMembers, setRegionMembers] = useState([]);
     const [nearbyMembers, setNearbyMembers] = useState([]);
     const [otherMembers, setOtherMembers] = useState([]);
