@@ -22,10 +22,10 @@ const units = createSlice({
 export const unitSelector = (state) => state.unitData.unitDataState;
 export const formDataSelector = (state) => state.unitData.formData;
 
-export const { updateUnits, updateFormData } = createSlice.actions;
+export const { updateUnits, updateFormData } = units.actions;
 
 export default configureStore({
     reducer: {
-        "unitData": unitData
+        "unitData": units.reducer
     }
 })
