@@ -155,6 +155,8 @@ export const initialK9Data = [
     },
 ];
 
+export const k9Skillsets = ["gsd", "cadaver", "explosives"]
+
 export const neighbouringCounties = {
     "6E Essex": ["USA_Michigan", "6D Chatham", "6P Elgin Chatham"],
     "6D Chatham": ["6E Essex", "6M Lambton", "6P Elgin Chatham", "6J Middlesex"],
