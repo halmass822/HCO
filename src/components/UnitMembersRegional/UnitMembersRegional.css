@@ -89,4 +89,5 @@
 .UnitMemberRegionalRow_button {
     cursor: pointer;
     height: 1.66rem;
+    margin: 0 0.5rem;
 }

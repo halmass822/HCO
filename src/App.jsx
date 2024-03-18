@@ -3,13 +3,15 @@ import TopBar from "./components/TopBar/TopBar";
 import "./App.css"
 import Modal from "./components/Modal/Modal";
 import React, { useState } from "react";
+import { useSelector } from "react-redux";
+import { formModalStateSelector } from "./store";
 
 export const FormDataContext = React.createContext();
 
 export default function App() {
 
     const [editFormData, setEditFormData] = useState("");
-    const [modalOpenState, setModalOpenState] = useState(false);
+    const modalOpenState = useSelector(formModalStateSelector)
 
     function handleEditUnit(targetUnitData) {
         setEditFormData(targetUnitData);

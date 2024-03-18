@@ -1,15 +1,19 @@
 import React, { useState } from 'react'
+import { useSelector } from 'react-redux';
+import { formDataSelector } from '../../store';
 
-export default function EditK9Unit(props) {
+export default function EditK9Unit() {
   
-  const [badge, setBadge] = useState(props.unitInfo.badge);
-  const [officerName, setOfficerName] = useState(props.unitInfo.officer_name);
-  const [k9Name, setK9Name] = useState(props.unitInfo.k9_name);
-  const [regionLong, setRegionLong] = useState(props.unitInfo.regionLong);
-  const [skillset, setSkillset] = useState(props.unitInfo.skillset);
-  const [phoneNumber, setPhoneNumber] = useState(props.unitInfo.phone_number);
-  const [pageAt, setPageAt] = useState(props.unitInfo.page_at);
-  const [notes, setNotes] = useState(props.unitInfo.notes);
+  const unitInfo = useSelector(formDataSelector)
+
+  const [badge, setBadge] = useState(unitInfo.badge);
+  const [officerName, setOfficerName] = useState(unitInfo.officer_name);
+  const [k9Name, setK9Name] = useState(unitInfo.k9_name);
+  const [regionLong, setRegionLong] = useState(unitInfo.regionLong);
+  const [skillset, setSkillset] = useState(unitInfo.skillset);
+  const [phoneNumber, setPhoneNumber] = useState(unitInfo.phone_number);
+  const [pageAt, setPageAt] = useState(unitInfo.page_at);
+  const [notes, setNotes] = useState(unitInfo.notes);
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -28,7 +32,7 @@ export default function EditK9Unit(props) {
           <input type="text" value={k9Name} onChange={(e) => setK9Name(e.target.value)} />
         </label>
         <label>Skillset: 
-          {/* TODO - implement skillset array selection */}
+          <input type="text" value={skillset} onChange={(e) => setSkillset(e.target.value)} />
         </label>
         <label>Phone Number: 
           <input type="text" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} />
