@@ -2,10 +2,11 @@
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: "translate(-50%, -50%)";
-    background-color: white;
+    transform: translate(-50%, -50%);
+    background-color: rgb(221, 220, 220);
     padding: 2rem;
     z-Index: 10;
+    border-radius: 1rem;
 }
 
 .modal_overlay {
@@ -14,6 +15,6 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(206, 206, 206, 0.671);
+    background-color: rgba(138, 138, 138, 0.671);
     z-Index: 10;
 }

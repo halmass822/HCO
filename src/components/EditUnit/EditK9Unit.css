@@ -1,0 +1,32 @@
+.EditK9Unit_form {
+    width: 25rem;
+    background-color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.EditK9Unit_form_row {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.25rem;
+    align-items: center;
+}
+
+.EditK9Unit_form_row input, .EditK9Unit_form_row textarea {
+    width: 14rem;
+    resize: none;
+}
+
+.EditK9Unit_button_undo {
+    background-color: rgb(253, 0, 0);
+    color: white;
+    cursor: pointer;
+    padding: 0.25rem;
+}
+
+.EditK9Unit_button_submit {
+    background-color: rgb(0, 247, 255);
+    color: black;
+    cursor: pointer;
+    padding: 0.25rem;
+}
