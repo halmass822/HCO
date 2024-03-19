@@ -12,4 +12,9 @@
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
     background-color: rgb(106, 146, 255);
+    transition: 0.2s;
+}
+
+.TopBarHeader h2:hover {
+    background-color: rgb(255, 255, 59);
 }

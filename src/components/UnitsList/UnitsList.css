@@ -23,12 +23,12 @@
     padding: 1rem;
     background-color: rgb(106, 146, 255);
     text-align: center;
+    transition: 0.2s;
 }
 
 .UnitsList_UnitSelectionButton:hover {
     cursor: pointer;
     background-color: rgb(255, 255, 59);
-    transition: 0.2s;
 }
 
 .UnitsList_UnitSelectionButton h2 {
