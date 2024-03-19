@@ -9,13 +9,13 @@ export default function TopBar() {
         <Link to="K9">
             <h2>K9</h2>
         </Link>
-        <Link to="ERT">
+        <Link to="/">
             <h2>ERT</h2>
         </Link>
-        <Link to="CIB">
+        <Link to="/">
             <h2>CIB</h2>
         </Link>
-        <Link to="CIC">
+        <Link to="/">
             <h2>CIC</h2>
         </Link>
     </header>
