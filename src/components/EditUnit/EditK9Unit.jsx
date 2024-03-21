@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { formDataSelector, setFormModalState, updateFormData } from '../../store';
 import "./EditK9Unit.css";
+import { WRCounties } from '../../utils';
 
 export default function EditK9Unit() {
 
@@ -20,7 +21,6 @@ export default function EditK9Unit() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    const region = regionLong.slice(0,2);
   }
 
   function resetChanges(e) {
@@ -50,6 +50,14 @@ export default function EditK9Unit() {
         <div className="EditK9Unit_form_row">
           <label>Officer Name:</label>
           <input type="text" value={officerName} onChange={(e) => setOfficerName(e.target.value)} />
+        </div>
+        <div className="EditK9Unit_form_row">
+          <label>Region:</label>
+          <select value={regionLong} onChange={(e) => setRegionLong(e.target.value)}>
+            {WRCounties.map((x, i) => {
+              return <option value={x} key={i}>{x}</option>
+            })}
+          </select>
         </div>
         <div className="EditK9Unit_form_row">
           <label>K9 Name:</label> 

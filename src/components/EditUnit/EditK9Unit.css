@@ -12,9 +12,17 @@
     align-items: center;
 }
 
-.EditK9Unit_form_row input, .EditK9Unit_form_row textarea {
+.EditK9Unit_form_row input {
     width: 14rem;
+}
+
+.EditK9Unit_form_row textarea {
+    width: 14.1rem;
     resize: none;
+}
+
+.EditK9Unit_form_row select {
+    width: 14.5rem;
 }
 
 .EditK9Unit_button_undo {

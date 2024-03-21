@@ -12,7 +12,7 @@ const units = createSlice({
     },
     reducers: {
         updateUnits: (state, action) => {
-            state[action.payload.target] = action.payload.data
+            state.unitDataState[action.payload.target] = action.payload.data
         },
         updateFormData: (state, action) => {
             state.formData = action.payload
