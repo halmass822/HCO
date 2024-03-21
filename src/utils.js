@@ -22,7 +22,7 @@ export const initialK9Data = [
         notes: "lucan"
     },
     {
-        badge: "124",
+        badge: "125",
         officer_name: "John Darcy",
         k9_name: "jack",
         regionLong: "6J Middlesex",
