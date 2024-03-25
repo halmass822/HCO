@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-import placeholderImg from "../../assets/img_placeholder.png";
-import ERTLogo from "../../assets/ERTLogo.png";
-import K9Logo from "../../assets/K9logo.png";
-import CIBLogo from "../../assets/CIB LOGO.png";
-import CICLogo from "../../assets/CIC Logo.jpg";
+import placeholderImg from "../../assets/img_placeholder 125.png";
+import ERTLogo from "../../assets/ert logo 125.png";
+import K9Logo from "../../assets/k9 logo 125.png";
+import CIBLogo from "../../assets/cib logo 125.png";
+import CICLogo from "../../assets/cic logo 125.png";
 import "./UnitsList.css"
 
 export default function UnitsList() {
