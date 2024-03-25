@@ -34,7 +34,7 @@ export default function UnitMemberRegionalRow(props) {
         <td className={"UnitMemberRegionalRow_td_notes"}>
             <p>{props.details.notes}</p>
             <button onClick={handleUnitUpdate} className="UnitMemberRegionalRow_button">UPDATE</button> 
-            <button onClick={handleUnitCheck} className="UnitMemberRegionalRow_button">PAGE</button>
+            <button onClick={handleUnitCheck} className="UnitMemberRegionalRow_button">SELECT</button>
             </td>
     </tr>
 }
