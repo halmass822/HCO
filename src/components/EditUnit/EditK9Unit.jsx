@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { formDataSelector, setFormModalState, updateFormData } from '../../store';
+import { editUnit, formDataSelector, setFormModalState, unitSelector, updateFormData } from '../../store';
 import "./EditK9Unit.css";
 import { WRCounties } from '../../utils';
 
@@ -9,6 +9,7 @@ export default function EditK9Unit() {
   const dispatch = useDispatch();
   
   const unitInfo = useSelector(formDataSelector)
+  const unitMembers = useSelector(unitSelector).K9
 
   const [badge, setBadge] = useState(unitInfo.badge);
   const [officerName, setOfficerName] = useState(unitInfo.officer_name);
@@ -21,6 +22,25 @@ export default function EditK9Unit() {
 
   function handleSubmit(e) {
     e.preventDefault();
+    const targetIndex = unitMembers.findIndex(x => x.badge === badge);
+    const updatedUnitInfo = {
+      "badge": badge,
+        "officer_name": officerName,
+        "k9_name": k9Name,
+        "regionLong": regionLong,
+        "region": regionLong.slice(0,2),
+        "skillset": skillset,
+        "phone_number": phoneNumber,
+        "page_at": pageAt,
+        "notes": notes
+    }
+    dispatch(editUnit({
+      targetUnit: "K9",
+      targetIndex: targetIndex,
+      info: updatedUnitInfo
+    }));
+    dispatch(updateFormData(updatedUnitInfo));
+    console.log(unitMembers);
   }
 
   function resetChanges(e) {
@@ -42,10 +62,10 @@ export default function EditK9Unit() {
   }
 
   return (
-      <form className="EditK9Unit_form">
+      <form className="EditK9Unit_form" onSubmit={handleSubmit}>
         <div className="EditK9Unit_form_row">
           <label>Badge: </label>
-          <input type="text" value={badge} onChange={(e) => setBadge(e.target.value)} />
+          <input type="text" value={badge} disabled />
         </div>
         <div className="EditK9Unit_form_row">
           <label>Officer Name:</label>
@@ -69,11 +89,11 @@ export default function EditK9Unit() {
         </div>
         <div className="EditK9Unit_form_row">
           <label>Phone Number:</label> 
-          <input type="text" value={phoneNumber} pattern="[\d- ]*" onChange={(e) => setPhoneNumber(e.target.value)} />
+          <input type="text" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} />
         </div>
         <div className="EditK9Unit_form_row">
           <label>Email for paging:</label>
-          <input type="text" value={pageAt} onChange={(e) => setPageAt(e.target.value)} />
+          <input type="text" value={pageAt} onChange={(e) => setPageAt(e.target.value)} pattern=".+@.+\..+"/>
         </div>
         <div className="EditK9Unit_form_row">
           <label>Notes:</label> 
@@ -82,7 +102,7 @@ export default function EditK9Unit() {
         <div className="EditK9Unit_form_row">
           <button onClick={resetChanges} className="EditK9Unit_button_undo">UNDO ALL CHANGES</button>
           <button onClick={closeForm} className="EditK9Unit_button_undo">CLOSE FORM</button>
-          <button onClick={handleSubmit} className="EditK9Unit_button_submit" type="submit">UPDATE UNIT</button>
+          <button className="EditK9Unit_button_submit" type="submit">UPDATE UNIT</button>
         </div>
       </form>
   )

@@ -26,7 +26,7 @@ export default function UnitMembersRegional(props) {
                 return !nearbyRegions.includes(member.regionLong) && !(selectedRegion === member.regionLong)
             })
         )
-    }, [selectedRegion])
+    }, [selectedRegion, unitMembers])
 
     function sendPageout() {
         if(unitsSelectedForPageout.length === 0) return;
