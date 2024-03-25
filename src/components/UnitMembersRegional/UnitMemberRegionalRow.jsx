@@ -26,15 +26,17 @@ export default function UnitMemberRegionalRow(props) {
     }
 
     return <tr className={`UnitMemberRegionalRow UnitMemberRegionalRow_${props.selectionRef} UnitMemberRegionalRow_${isChecked}_state`}>
-        <td>{props.details.region}</td>
-        <td>{props.details.officer_name}</td>
-        <td>{props.details.badge}</td>
-        <td>{props.details.skillset.map((x) => `${x} `)}</td>
-        <td>{props.details.phone_number}</td>
+        <td className="UnitMemberRegionalRow_td_region">{props.details.region}</td>
+        <td className="UnitMemberRegionalRow_td_officer_name">{props.details.officer_name}</td>
+        <td className="UnitMemberRegionalRow_td_badge">{props.details.badge}</td>
+        <td className="UnitMemberRegionalRow_td_skillset">{props.details.skillset.map((x) => `${x} `)}</td>
+        <td className="UnitMemberRegionalRow_td_phone_number">{props.details.phone_number}</td>
         <td className={"UnitMemberRegionalRow_td_notes"}>
             <p>{props.details.notes}</p>
-            <button onClick={handleUnitUpdate} className="UnitMemberRegionalRow_button">UPDATE</button> 
-            <button onClick={handleUnitCheck} className="UnitMemberRegionalRow_button">SELECT</button>
+            <div className="UnitMemeberRegionalRow_button_div">
+                <button onClick={handleUnitUpdate} className="UnitMemberRegionalRow_button">UPDATE</button> 
+                <button onClick={handleUnitCheck} className="UnitMemberRegionalRow_button">SELECT</button>
+            </div>
             </td>
     </tr>
 }
