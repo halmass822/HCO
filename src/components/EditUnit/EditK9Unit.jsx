@@ -40,7 +40,6 @@ export default function EditK9Unit() {
       info: updatedUnitInfo
     }));
     dispatch(updateFormData(updatedUnitInfo));
-    console.log(unitMembers);
   }
 
   function resetChanges(e) {
